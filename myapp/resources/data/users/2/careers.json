@@ -3,18 +3,18 @@
     {
       "userIdx": 2,
       "userCareerIdx": 3,
-      "company": "A회사",
+      "company": "A Company",
       "employeeStateCode": "E400",
-      "rank": "사원",
+      "rank": "Associate",
       "careerStartDate": "20070201",
       "careerEndDate": "20080301"
     },
     {
       "userIdx": 2,
       "userCareerIdx": 4,
-      "company": "B회사",
+      "company": "B Company",
       "employeeStateCode": "E400",
-      "rank": "대리",
+      "rank": "Senior Associate",
       "careerStartDate": "20080412",
       "careerEndDate": "20100912"
     },

@@ -3,8 +3,8 @@
     {
       "userEducationIdx": 4,
       "user_idx": 3,
-      "institution": "C대학교",
-      "major": "전기전자공학",
+      "institution": "C University",
+      "major": "Electronics",
       "degreeCode": "D200",
       "graduationCode": "G300",
       "yearOfGraduation": ""
@@ -12,8 +12,8 @@
     {
       "userEducationIdx": 5,
       "user_idx": 3,
-      "institution": "C대학교",
-      "major": "전기전자공학",
+      "institution": "C University",
+      "major": "Electronics",
       "degreeCode": "D300",
       "graduationCode": "G300",
       "yearOfGraduation": ""
