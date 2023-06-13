@@ -2,15 +2,15 @@
   "DEPT_CODE" :[
     {
       "code": "A1000",
-      "codeName": "개발1팀"
+      "codeName": "Service R&D"
     },
     {
       "code": "A1001",
-      "codeName": "개발2팀"
+      "codeName": "Platform R&D"
     },
     {
       "code": "A1002",
-      "codeName": "개발3팀"
+      "codeName": "UI Design"
     }
   ]
 }

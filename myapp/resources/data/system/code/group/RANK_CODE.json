@@ -2,23 +2,23 @@
   "RANK_CODE" : [
     {
       "code": "R100",
-      "codeName": "사원"
+      "codeName": "Associate"
     },
     {
       "code": "R200",
-      "codeName": "대리"
+      "codeName": "Senior Associate"
     },
     {
       "code": "R300",
-      "codeName": "과장"
+      "codeName": "Manager"
     },
     {
       "code": "R400",
-      "codeName": "차장"
+      "codeName": "Senior Manager"
     },
     {
       "code": "R500",
-      "codeName": "부장"
+      "codeName": "Director"
     }
   ]
 }

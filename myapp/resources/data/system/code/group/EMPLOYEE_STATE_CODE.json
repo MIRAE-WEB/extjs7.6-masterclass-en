@@ -2,15 +2,15 @@
   "EMPLOYEE_STATE_CODE" : [
     {
       "code": "E100",
-      "codeName": "재직"
+      "codeName": "Currently Employed"
     },
     {
       "code": "E200",
-      "codeName": "휴직"
+      "codeName": "Absence"
     },
     {
       "code": "E400",
-      "codeName": "퇴직"
+      "codeName": "Retire"
     }
   ]
 }

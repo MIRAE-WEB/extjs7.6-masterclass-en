@@ -2,11 +2,11 @@
   "GENDER_CODE" : [
     {
       "code": "MALE",
-      "codeName": "남성"
+      "codeName": "Male"
     },
     {
       "code": "FEMALE",
-      "codeName": "여성"
+      "codeName": "Female"
     }
   ]
 }

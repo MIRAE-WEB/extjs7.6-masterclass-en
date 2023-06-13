@@ -2,19 +2,19 @@
   "DEGREE_CODE" :[
     {
       "code": "D100",
-      "codeName": "전문학사"
+      "codeName": "Associate"
     },
     {
       "code": "D200",
-      "codeName": "학사"
+      "codeName": "Bachelor"
     },
     {
       "code": "D300",
-      "codeName": "석사"
+      "codeName": "Master"
     },
     {
       "code": "D400",
-      "codeName": "박사"
+      "codeName": "Doctor"
     }
   ]
 }
