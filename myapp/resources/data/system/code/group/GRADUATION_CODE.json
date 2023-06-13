@@ -2,15 +2,15 @@
   "GRADUATION_CODE" : [
     {
       "code": "G100",
-      "codeName": "enroll"
+      "codeName": "Enrolled"
     },
     {
       "code": "G200",
-      "codeName": "휴학"
+      "codeName": "Leave"
     },
     {
       "code": "G300",
-      "codeName": "졸업"
+      "codeName": "Graduated"
     }
   ]
 }

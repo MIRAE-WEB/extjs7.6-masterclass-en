@@ -2,19 +2,19 @@
   "BANK_CODE" : [
     {
       "code": "A10",
-      "codeName": "Citi"
+      "codeName": "JP Morgan"
     },
     {
       "code": "A11",
-      "codeName": "우리"
+      "codeName": "Standard Charted"
     },
     {
       "code": "A13",
-      "codeName": "신한"
+      "codeName": "Citi Bank"
     },
     {
       "code": "A14",
-      "codeName": "기업"
+      "codeName": "HSBC"
     }
   ]
 }
