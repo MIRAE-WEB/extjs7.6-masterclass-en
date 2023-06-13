@@ -2,15 +2,15 @@
   "EMPLOYEE_STATE_CODE" : [
     {
       "code": "E100",
-      "codeName": "Currently Employed"
+      "codeName": "Enrolled"
     },
     {
       "code": "E200",
-      "codeName": "Absence"
+      "codeName": "Leave"
     },
     {
       "code": "E400",
-      "codeName": "Retire"
+      "codeName": "Resigned"
     }
   ]
 }

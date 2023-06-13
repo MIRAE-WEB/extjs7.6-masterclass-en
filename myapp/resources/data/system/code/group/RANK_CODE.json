@@ -2,23 +2,23 @@
   "RANK_CODE" : [
     {
       "code": "R100",
-      "codeName": "Associate"
+      "codeName": "Staff"
     },
     {
       "code": "R200",
-      "codeName": "Senior Associate"
-    },
-    {
-      "code": "R300",
       "codeName": "Manager"
     },
     {
+      "code": "R300",
+      "codeName": "Director"
+    },
+    {
       "code": "R400",
-      "codeName": "Senior Manager"
+      "codeName": "VP"
     },
     {
       "code": "R500",
-      "codeName": "Director"
+      "codeName": "Executive"
     }
   ]
 }
