@@ -1,0 +1,16 @@
+{
+  "EMPLOYEE_STATE_CODE" : [
+    {
+      "code": "E100",
+      "codeName": "재직"
+    },
+    {
+      "code": "E200",
+      "codeName": "휴직"
+    },
+    {
+      "code": "E400",
+      "codeName": "퇴직"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "educations": [
+    {
+      "userEducationIdx": 3,
+      "user_idx": 2,
+      "institution": "B대학교",
+      "major": "사회복지학과",
+      "degreeCode": "D200",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    }
+  ]
+}

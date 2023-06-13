@@ -1,0 +1,31 @@
+{
+  "careers" : [
+    {
+      "userIdx": 2,
+      "userCareerIdx": 3,
+      "company": "A회사",
+      "employeeStateCode": "E400",
+      "rank": "사원",
+      "careerStartDate": "20070201",
+      "careerEndDate": "20080301"
+    },
+    {
+      "userIdx": 2,
+      "userCareerIdx": 4,
+      "company": "B회사",
+      "employeeStateCode": "E400",
+      "rank": "대리",
+      "careerStartDate": "20080412",
+      "careerEndDate": "20100912"
+    },
+    {
+      "userIdx": 2,
+      "userCareerIdx": 5,
+      "company": "C회사",
+      "employeeStateCode": "E100",
+      "rank": "과장",
+      "careerStartDate": "20190913",
+      "careerEndDate": ""
+    }
+  ]
+}

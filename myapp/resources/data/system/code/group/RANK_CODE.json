@@ -1,0 +1,24 @@
+{
+  "RANK_CODE" : [
+    {
+      "code": "R100",
+      "codeName": "사원"
+    },
+    {
+      "code": "R200",
+      "codeName": "대리"
+    },
+    {
+      "code": "R300",
+      "codeName": "과장"
+    },
+    {
+      "code": "R400",
+      "codeName": "차장"
+    },
+    {
+      "code": "R500",
+      "codeName": "부장"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "GRADUATION_CODE" : [
+    {
+      "code": "G100",
+      "codeName": "재학"
+    },
+    {
+      "code": "G200",
+      "codeName": "휴학"
+    },
+    {
+      "code": "G300",
+      "codeName": "졸업"
+    }
+  ]
+}

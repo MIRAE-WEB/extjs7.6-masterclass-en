@@ -1,0 +1,22 @@
+{
+  "educations": [
+    {
+      "userEducationIdx": 1,
+      "user_idx": 1,
+      "institution": "A대학교",
+      "major": "컴퓨터공학과",
+      "degreeCode": "D200",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    },
+    {
+      "userEducationIdx": 2,
+      "user_idx": 1,
+      "institution": "A대학교",
+      "major": "컴퓨터공학과",
+      "degreeCode": "D300",
+      "graduationCode": "G100",
+      "yearOfGraduation": ""
+    }
+  ]
+}

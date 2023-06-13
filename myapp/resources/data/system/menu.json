@@ -1,0 +1,22 @@
+{
+  "menu" : {
+    "text": "Ext JS",
+    "expanded": true,
+    "children": [
+      {
+        "text": "인사관리",
+        "expanded" : true,
+        "children": [
+          { "leaf": true, "text": "인사정보" , "widgetName" : "user-management"}
+        ]
+      },{
+        "text": "시스템관리",
+        "expanded" : true,
+        "children": [
+          { "leaf": true, "text": "메뉴관리" , "widgetName" : "menu-management"},
+          { "leaf": true, "text": "기준정보" , "widgetName" : "code-management"}
+        ]
+      }
+    ]
+  }
+}

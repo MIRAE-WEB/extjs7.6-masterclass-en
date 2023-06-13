@@ -1,0 +1,20 @@
+{
+  "BANK_CODE" : [
+    {
+      "code": "A10",
+      "codeName": "농협"
+    },
+    {
+      "code": "A11",
+      "codeName": "우리"
+    },
+    {
+      "code": "A13",
+      "codeName": "신한"
+    },
+    {
+      "code": "A14",
+      "codeName": "기업"
+    }
+  ]
+}
