@@ -13,6 +13,9 @@ Ext.application({
             quickTips: true
         }
     },
+    stores : [
+        'Navigation'
+    ],
 
     requires: [
         // This will automatically load all classes in the MyApp namespace
@@ -21,6 +24,7 @@ Ext.application({
     ],
 
     launch : function(){
+        Ext.getStore('Navigation').dataLoad();
         Ext.widget('global-main');
     }
 });
