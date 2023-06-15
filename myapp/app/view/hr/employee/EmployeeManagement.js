@@ -20,10 +20,16 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
         flex : 1
     },{
         xtype : 'employee-form',
+        tbar :[{
+            xtype : 'tbfill'
+        },{
+            xtype : 'button',
+            text : 'Save'
+        }],
         title : 'Employee Form',
         frame : true,
-        margin : '0 0 10 0',
-        flex : 1
+        margin : '0 0 10 0'
+
     },{
         xtype : 'employee-tab',
         frame : true,

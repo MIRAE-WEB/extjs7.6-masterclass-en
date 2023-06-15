@@ -16,17 +16,12 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
     ],
 
     controller: 'employee-form',
-    tbar :[{
-        xtype : 'tbfill'
-    },{
-        xtype : 'button',
-        text : 'Save'
-    }],
     layout :'column',
-    bodyPadding : '10 10 10 20',
+    bodyPadding : '10 0 10 20',
     defaults : {
         columnWidth : .333,
-        margin : '0 10 10 0',
+        labelWidth : 60,
+        margin : '0 20 10 0',
 
     },
 

@@ -7,10 +7,13 @@ Ext.define('MyApp.view.hr.employee.tab.EmployeeTab',{
     ],
     controller: 'employee-tab',
     items : [{
+        xtype : 'employee-detail-tab',
         title : 'Details'
     },{
+        xtype : 'employee-career-tab',
         title : 'Career'
     },{
+        xtype : 'employee-education-tab',
         title : 'Education'
     }]
 });
