@@ -4,7 +4,6 @@ Ext.define('MyApp.store.Navigation',{
 
     dataLoad : function(){
         var me =this;
-        debugger;
         Ext.Ajax.request({
             url : 'resources/data/system/menu.json',
             method : 'GET',

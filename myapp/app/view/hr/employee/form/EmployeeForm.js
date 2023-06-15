@@ -24,15 +24,23 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         margin : '0 20 10 0',
 
     },
-
+    tbar :[{
+        xtype : 'tbfill'
+    },{
+        xtype : 'button',
+        text : 'Save',
+        handler : 'onBtnSave'
+    }],
     items : [{
         xtype : 'textfield',
         allowBlank : false,
+        name : 'userId',
         blankText : 'ID is required',
         fieldLabel : 'ID'
     },{
         xtype : 'textfield',
-        fieldLabel : 'Name'
+        fieldLabel : 'Name',
+        name : 'userName',
     },{
         xtype : 'fieldcontainer',
         fieldLabel : 'Gender',
@@ -56,23 +64,28 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
     },{
         xtype : 'datefield',
         format : 'Y.m.d',
+        name : 'birthDate',
         altFormats: 'Y.m.d|Ymd|Y-m-d',
         submitFormat : 'Ymd',
         fieldLabel : 'BirthDate'
     },{
         xtype : 'textfield',
+        name : 'mobile',
         fieldLabel : 'Mobile'
     },{
         xtype : 'textfield',
         fieldLabel : 'Email',
+        name : 'email',
         vtype : 'email'
     },{
         xtype : 'code-combo',
         fieldLabel : 'Dept.',
+        name : 'deptCode',
         codeGroup : 'DEPT_CODE'
     },{
         xtype : 'code-combo',
         fieldLabel : 'Rank',
+        name : 'rankCode',
         codeGroup : 'RANK_CODE'
 
 

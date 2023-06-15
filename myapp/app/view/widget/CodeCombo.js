@@ -21,6 +21,7 @@ Ext.define('MyApp.view.widget.CodeCombo',{
         var codeGroup = me.codeGroup;
 
         var store = Ext.create('Ext.data.Store',{
+            autoLoad : true,
             proxy : {
                 type : 'ajax',
                 url : 'resources/data/system/code/group/'+codeGroup+'.json',

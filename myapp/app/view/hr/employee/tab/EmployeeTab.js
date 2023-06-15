@@ -5,6 +5,7 @@ Ext.define('MyApp.view.hr.employee.tab.EmployeeTab',{
     requires: [
         'MyApp.view.hr.employee.tab.EmployeeTabController'
     ],
+    deferredRender :false,
     controller: 'employee-tab',
     items : [{
         xtype : 'employee-detail-tab',

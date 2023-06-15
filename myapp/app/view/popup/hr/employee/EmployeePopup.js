@@ -11,6 +11,7 @@ Ext.define('MyApp.view.popup.hr.employee.EmployeePopup',{
 
     width : 900,
     modal : true,
+    closeAction: 'hide',
     title : 'Add Employee',
     controller: 'employee-popup',
     layout : {
@@ -27,11 +28,17 @@ Ext.define('MyApp.view.popup.hr.employee.EmployeePopup',{
         xtype : 'tbfill'
     },{
         xtype : 'button',
-        text : 'Apply'
+        text : 'Apply',
+        handler : 'onBtnApply'
     },{
         xtype : 'button',
-        text : 'Cancel'
+        text : 'Cancel',
+        handler : 'onBtnCancel'
     },{
         xtype : 'tbfill'
-    }]
+    }],
+    listeners : {
+        afterrender : 'onAfterRender',
+        show : 'onShow'
+    }
 });

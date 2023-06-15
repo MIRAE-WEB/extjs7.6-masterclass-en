@@ -16,7 +16,8 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
         fieldLabel : 'Filter'
     },{
         xtype : 'button',
-        text : 'Search'
+        text : 'Search',
+        handler : 'onBtnSearch'
     },{
         xtype : 'tbfill'
     },{
@@ -25,7 +26,8 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
         handler : 'onBtnAdd'
     },{
         xtype : 'button',
-        text : 'Delete'
+        text : 'Delete',
+        handler : 'onBtnDelete'
     }],
     bind : '{employeeStore}',
     columns : [
@@ -48,5 +50,8 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
         },
         {text : 'Email', dataIndex:'email',flex : 1},
 
-    ]
+    ],
+    listeners : {
+        select : 'onSelect'
+    }
 });

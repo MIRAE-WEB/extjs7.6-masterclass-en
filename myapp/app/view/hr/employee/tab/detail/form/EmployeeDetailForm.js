@@ -1,6 +1,6 @@
 
 Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.form.Panel',
     alias : 'widget.employee-detail-form',
     requires: [
         'Ext.button.Button',
@@ -31,15 +31,18 @@ Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
         items : [{
             xtype : 'code-combo',
             fieldLabel : 'Bank',
+            name : 'bankCode',
             codeGroup : 'BANK_CODE'
         },{
             xtype : 'textfield',
             margin : '-5 20 0 0',
+            name : 'bankAccount',
             fieldLabel : 'Account<br>No.'
         },{
             xtype : 'textfield',
             margin : '-5 20 0 0',
-            fieldLabel : 'Account<br>Name'
+            fieldLabel : 'Account<br>Name',
+            name : 'ownerName',
         }]
     },{
         xtype : 'fieldset',
@@ -60,7 +63,8 @@ Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
             items : [{
                 xtype : 'textfield',
                 flex : 1,
-                fieldLabel : 'Zipcode'
+                fieldLabel : 'Zipcode',
+                name : 'zipCode'
             },{
                 xtype : 'button',
                 text : 'Search'
@@ -68,9 +72,11 @@ Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
 
         },{
             xtype : 'textfield',
-            fieldLabel : 'Adress'
+            fieldLabel : 'Adress',
+            name : 'addres1'
         },{
-            xtype : 'textfield'
+            xtype : 'textfield',
+            name : 'addres2'
         }]
     }]
 });
