@@ -1,6 +1,6 @@
 
 Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.grid.Panel',
     alias : 'widget.employee-grid',
     requires: [
         'Ext.button.Button',
@@ -26,5 +26,27 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
     },{
         xtype : 'button',
         text : 'Delete'
-    }]
+    }],
+    bind : '{employeeStore}',
+    columns : [
+        {text : 'ID', dataIndex:'userId'},
+        {text : 'Name', dataIndex:'userName'},
+        {text : 'Birth Date', dataIndex:'birthDate',
+            renderer: function (value){
+                return value.substr(0,4)+'-'+value.substr(4,2)+'-'+value.substr(6);
+            }
+        },
+        {text : 'Gender', dataIndex:'genderCode',
+            renderer: function (value){
+                if(value=='MALE'){
+                    return 'Male'
+                }
+
+                return 'Female';
+            }
+
+        },
+        {text : 'Email', dataIndex:'email',flex : 1},
+
+    ]
 });

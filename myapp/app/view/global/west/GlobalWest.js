@@ -1,6 +1,11 @@
 
 Ext.define('MyApp.view.global.west.GlobalWest',{
-    extend: 'Ext.panel.Panel',
+    extend: 'Ext.tree.Panel',
     alias : 'widget.global-west',
-    html: 'Hello, World!!'
+
+    requires: [
+        'MyApp.store.Navigation'
+    ],
+    store : 'Navigation',
+    rootVisible : false
 });

@@ -3,11 +3,37 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
     extend: 'MyApp.view.global.content.GlobalContent',
     alias : 'widget.employee-management',
     requires: [
+        'Ext.data.Store',
+        'Ext.data.proxy.Ajax',
+        'Ext.data.reader.Json',
         'Ext.layout.container.VBox',
         'MyApp.view.hr.employee.EmployeeManagementController'
     ],
 
     controller: 'employee-management',
+    viewModel : {
+      stores : {
+          employeeStore : {
+              type : 'store',
+              autoLoad : true,
+              proxy : {
+                  type : 'ajax',
+                  url : 'resources/data/users.json',
+                  method : 'GET',
+                  reader :{
+                      type : 'json',
+                      rootProperty : 'users',
+                  }
+              }
+          },
+          employeeCareerStore : {
+
+          },
+          employeeEducationStore : {
+
+          }
+      }
+    },
     layout : {
         type : 'vbox',
         align : 'stretch'
@@ -26,7 +52,7 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
             xtype : 'button',
             text : 'Save'
         }],
-        title : 'Employee Form',
+        title : 'Employee Information',
         frame : true,
         margin : '0 0 10 0'
 
