@@ -67,24 +67,14 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         fieldLabel : 'Email',
         vtype : 'email'
     },{
-        xtype : 'combobox',
+        xtype : 'code-combo',
         fieldLabel : 'Dept.',
-        store : Ext.create('Ext.data.Store',{
-           data : [
-               {code : 'Dept', codeName : 'Dept.'}
-           ]
-        }),
-        displayField: 'codeName',
-        valueField : 'code'
+        codeGroup : 'DEPT_CODE'
     },{
-        xtype : 'combobox',
+        xtype : 'code-combo',
         fieldLabel : 'Rank',
-        store : Ext.create('Ext.data.Store',{
-            data : [
-                {code : 'Rank', codeName : 'Rank'}
-            ]
-        }),
-        displayField: 'codeName',
-        valueField : 'code'
+        codeGroup : 'RANK_CODE'
+
+
     }]
 });

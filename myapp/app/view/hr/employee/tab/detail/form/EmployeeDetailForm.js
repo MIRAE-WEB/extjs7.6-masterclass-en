@@ -29,8 +29,9 @@ Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
             margin : '0 20 0 0',
         },
         items : [{
-            xtype : 'textfield',
-            fieldLabel : 'Bank'
+            xtype : 'code-combo',
+            fieldLabel : 'Bank',
+            codeGroup : 'BANK_CODE'
         },{
             xtype : 'textfield',
             margin : '-5 20 0 0',
