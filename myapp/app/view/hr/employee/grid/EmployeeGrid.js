@@ -6,6 +6,7 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
         'Ext.button.Button',
         'Ext.form.field.Text',
         'Ext.toolbar.Fill',
+        'Miraeweb.utils.Format',
         'MyApp.view.hr.employee.grid.EmployeeGridController'
     ],
 
@@ -34,18 +35,10 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
         {text : 'ID', dataIndex:'userId'},
         {text : 'Name', dataIndex:'userName'},
         {text : 'Birth Date', dataIndex:'birthDate',
-            renderer: function (value){
-                return value.substr(0,4)+'-'+value.substr(4,2)+'-'+value.substr(6);
-            }
+            renderer: Miraeweb.Format.dateRenderer
         },
         {text : 'Gender', dataIndex:'genderCode',
-            renderer: function (value){
-                if(value=='MALE'){
-                    return 'Male'
-                }
-
-                return 'Female';
-            }
+            renderer: Miraeweb.Format.codeRenderer('GENDER_CODE')
 
         },
         {text : 'Email', dataIndex:'email',flex : 1},

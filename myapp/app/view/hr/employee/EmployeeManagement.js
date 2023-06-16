@@ -1,6 +1,6 @@
 
 Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
-    extend: 'MyApp.view.global.content.GlobalContent',
+    extend: 'MiraewebTheme.view.global.content.GlobalContent',
     alias : 'widget.employee-management',
     requires: [
         'Ext.data.Store',
