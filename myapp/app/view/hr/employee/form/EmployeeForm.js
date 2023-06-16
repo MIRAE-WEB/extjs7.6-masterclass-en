@@ -29,6 +29,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
     },{
         xtype : 'button',
         text : 'Save',
+        itemId : 'btnSave',
         handler : 'onBtnSave'
     }],
     items : [{
@@ -87,7 +88,9 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         fieldLabel : 'Rank',
         name : 'rankCode',
         codeGroup : 'RANK_CODE'
-
-
-    }]
+    }],
+    listeners : {
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

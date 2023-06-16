@@ -16,5 +16,10 @@ Ext.define('MyApp.view.hr.employee.tab.EmployeeTab',{
     },{
         xtype : 'employee-education-tab',
         title : 'Education'
-    }]
+    }],
+    listeners : {
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
+
 });

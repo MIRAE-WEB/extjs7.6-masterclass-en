@@ -11,5 +11,9 @@ Ext.define('MyApp.view.hr.employee.tab.career.EmployeeCareerTab',{
     layout : 'fit',
     items : [{
         xtype : 'employee-career-grid'
-    }]
+    }],
+    listeners : {
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

@@ -67,6 +67,7 @@ Ext.define('MyApp.view.hr.employee.tab.detail.form.EmployeeDetailForm',{
                 name : 'zipCode'
             },{
                 xtype : 'button',
+                itemId : 'btnZipcode',
                 text : 'Search'
             }]
 

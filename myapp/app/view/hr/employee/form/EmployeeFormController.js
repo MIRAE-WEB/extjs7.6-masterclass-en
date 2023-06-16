@@ -2,7 +2,15 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.employee-form',
 
-
+    onResetMode : function(){
+        this.getView().getForm().reset();
+    },
+    onUpdateMode : function(){
+        var userIdx = this.getView().lookupViewModel().get('userIdx');
+        var employeeStore = this.getView().lookupViewModel().get('employeeStore');
+        var record = employeeStore.findRecord('userIdx',userIdx);
+        this.getView().getForm().loadRecord(record);
+    },
     onBtnSave : function(button){
         var thisView = this.getView();
         var globalContent = this.getView().up('global-content');
@@ -32,17 +40,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
                         Ext.Msg.alert('Info','Save Success',function(btn){
                             if(btn=='ok'){
 
-                                var employeeForm = globalContent.down('employee-form');
-                                var employeeDetailForm = globalContent.down('employee-detail-form');
-
-                                employeeForm.getForm().reset();
-                                employeeDetailForm.getForm().reset();
-
-                                var employeeCareerGrid = globalContent.down('employee-career-grid');
-                                var employeeEducationGrid = globalContent.down('employee-education-grid');
-                                employeeCareerGrid.getStore().removeAll();
-                                employeeEducationGrid.getStore().removeAll();
-                                globalContent.down('employee-grid').getStore().load();
+                                globalContent.fireEvent('search-employee');
                             }
                         });
 

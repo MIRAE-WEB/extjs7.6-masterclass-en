@@ -12,6 +12,9 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
 
     controller: 'employee-management',
     viewModel : {
+      data : {
+        userIdx : null
+      },
       stores : {
           employeeStore : {
               type : 'store',
@@ -54,5 +57,11 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
         xtype : 'employee-tab',
         frame : true,
         flex : 1
-    }]
+    }],
+    listeners : {
+        'afterrender' : 'onResetMode',
+        'search-employee' : 'onSearch',
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

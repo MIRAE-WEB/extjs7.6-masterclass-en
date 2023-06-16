@@ -11,5 +11,9 @@ Ext.define('MyApp.view.hr.employee.tab.detail.EmployeeDetailTab',{
     layout : 'fit',
     items : [{
         xtype : 'employee-detail-form'
-    }]
+    }],
+    listeners : {
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });

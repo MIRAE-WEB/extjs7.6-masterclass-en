@@ -10,5 +10,9 @@ Ext.define('MyApp.view.hr.employee.tab.education.EmployeeEducationTab',{
     layout : 'fit',
     items : [{
         xtype : 'employee-education-grid'
-    }]
+    }],
+    listeners : {
+        'reset-mode' : 'onResetMode',
+        'update-mode' : 'onUpdateMode'
+    }
 });
