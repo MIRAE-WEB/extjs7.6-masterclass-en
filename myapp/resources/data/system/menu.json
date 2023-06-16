@@ -7,7 +7,7 @@
         "text": "HR",
         "expanded" : true,
         "children": [
-          { "leaf": true, "text": "Employees" , "widgetName" : "employees-management"}
+          { "leaf": true, "text": "Employees" , "widgetName" : "employee-management"}
         ]
       },{
         "text": "System",
