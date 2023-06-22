@@ -10,6 +10,10 @@ Ext.define('MiraewebTheme.view.global.GlobalMain',{
     controller: 'global-main',
     layout : 'border',
     items : [{
+        xtype : 'global-north',
+        region : 'north',
+        height : 50
+    },{
         xtype : 'global-west',
         title : 'Menu',
         region : 'west',

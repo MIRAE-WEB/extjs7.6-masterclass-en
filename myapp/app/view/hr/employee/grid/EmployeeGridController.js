@@ -33,7 +33,7 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGridController', {
         Ext.Msg.confirm('Info','Delete?',function(btn){
            if(btn=='yes'){
 
-               Ext.Ajax.request({
+               Miraeweb.Ajax.request({
                    url : 'test/'+userIdx,
                    method : 'DELETE',
                    success: function(){

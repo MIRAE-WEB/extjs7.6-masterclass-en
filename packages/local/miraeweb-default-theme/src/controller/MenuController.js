@@ -2,6 +2,9 @@ Ext.define('MiraewebTheme.controller.MenuController', {
     extend : 'Ext.app.Controller',
 
     refs: [{
+        ref: 'globalNorth',
+        selector: 'global-north'
+    },{
         ref: 'globalCenterTab',
         selector: 'global-center-tab'
     },{
@@ -15,6 +18,9 @@ Ext.define('MiraewebTheme.controller.MenuController', {
         }
     },
     control: {
+        'global-north' :{
+            afterrender : 'onAfterRenderGlobalNorth'
+        },
         'global-west': {
             beforeselect :'onMenuBeforeSelect',
             select: 'onMenuSelect'
@@ -22,6 +28,13 @@ Ext.define('MiraewebTheme.controller.MenuController', {
         'global-center-tab': {
             tabchange :'onMenuTabChange',
         }
+    },
+    onAfterRenderGlobalNorth : function(){
+
+        var userData = Miraeweb.Jwt.getUserData();
+
+        this.getGlobalNorth().lookupViewModel().set('userData',userData);
+
     },
     onMenuTabChange : function(tabpanel,newCard,oldCard){
 
@@ -47,6 +60,15 @@ Ext.define('MiraewebTheme.controller.MenuController', {
     },
 
     beforeRoute : function (id, action) {
+
+        var accessToken = Miraeweb.Jwt.getAccessToken();
+
+        if(!accessToken){
+            action.stop();
+            return false;
+        }
+
+
         var rootNode = Ext.getStore('Navigation').getRoot();
         var findNode = rootNode.findChild('widgetName',id,true);
 
@@ -54,6 +76,7 @@ Ext.define('MiraewebTheme.controller.MenuController', {
             action.resume();
         }else{
             action.stop();
+            this.redirectTo('employee-management');
         }
 
 

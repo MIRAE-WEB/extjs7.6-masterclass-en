@@ -31,7 +31,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
         Ext.Msg.confirm('Info', 'Save Data?',function(btn){
             if(btn=='yes'){
 
-                Ext.Ajax.request({
+                Miraeweb.Ajax.request({
                     url : 'resources/data/users.json',
                     method : 'POST',
                     params : data,

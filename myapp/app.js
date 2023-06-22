@@ -13,8 +13,11 @@ Ext.application({
             quickTips: true
         }
     },
+    controllers : [
+        'MiraewebTheme.controller.MenuController'
+    ],
     stores : [
-        'Navigation'
+        'MiraewebTheme.store.Navigation'
     ],
 
     requires: [
@@ -24,7 +27,22 @@ Ext.application({
     ],
 
     launch : function(){
-        Ext.getStore('Navigation').dataLoad();
-        Ext.widget('global-main');
+
+
+        var login = Miraeweb.Jwt.getAccessToken();
+
+        if(login==null){
+            location.hash='#login';
+            Ext.widget('login-popup').show();
+        }else{
+
+
+            if(!location.hash){
+                location.hash='#employee-management';
+            }
+            Ext.getStore('Navigation').dataLoad();
+            Ext.widget('global-main');
+
+        }
     }
 });

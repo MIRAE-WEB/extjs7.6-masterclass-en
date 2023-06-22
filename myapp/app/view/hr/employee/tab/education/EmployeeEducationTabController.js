@@ -8,7 +8,7 @@ Ext.define('MyApp.view.hr.employee.tab.education.EmployeeEducationTabController'
         var userIdx = this.getView().lookupViewModel().get('userIdx');
         var store = this.getView().down('grid').getStore();
 
-        Ext.Ajax.request({
+        Miraeweb.Ajax.request({
             url : 'resources/data/users/'+userIdx+'/educations.json',
             method : 'GET',
             success : function(response){
