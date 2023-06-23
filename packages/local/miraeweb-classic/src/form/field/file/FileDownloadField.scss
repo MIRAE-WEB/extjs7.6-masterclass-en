@@ -1,0 +1,19 @@
+.miraeweb-file-delete{
+    float: right;
+    margin-top: -2px;
+    margin-left: 2px;
+    width: 8px;
+    visibility: hidden;
+    cursor:pointer;
+    height: 8px;
+    background-size: 8px 8px !important;
+    background-repeat: no-repeat !important;
+    background-image: url('ico/window-close.png') !important;
+}
+.miraeweb-file-link{
+    font-size:12px;
+    font-weight:bold;
+    color:#3f90c4;
+    font-style:normal;
+    text-decoration-line: none;
+}

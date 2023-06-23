@@ -1,0 +1,14 @@
+{
+  "data":[
+  {
+    "fileId": 1,
+    "fileSize" : 123400,
+    "originalName": "TextFile.txt"
+  },
+  {
+    "fileId": 2,
+    "fileSize" : 234400,
+    "originalName": "test.png"
+  }
+]
+}

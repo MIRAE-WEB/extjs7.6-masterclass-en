@@ -12,6 +12,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         'Ext.form.field.Text',
         'Ext.layout.container.HBox',
         'Ext.toolbar.Fill',
+        'Miraeweb.container.file.FileContainer',
         'MyApp.view.hr.employee.form.EmployeeFormController'
     ],
 
@@ -88,6 +89,21 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         fieldLabel : 'Rank',
         name : 'rankCode',
         codeGroup : 'RANK_CODE'
+    },{
+        xtype: 'file-container',
+        fieldLabel: 'AttachFile',
+        columnWidth: 1,
+        defaultParams : {
+            maxFileCount: 2,
+            totalMaxFileSize: 1024 * 1024 * 1024,
+            allowMimeType: [
+                'image/jpeg',
+                'image/png',
+                'image/gif'
+            ]
+        },
+        fileIdProperty: 'attachFileIds',
+        fileNameProperty: 'AttachFileName'
     }],
     listeners : {
         'reset-mode' : 'onResetMode',

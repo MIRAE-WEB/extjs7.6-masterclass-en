@@ -46,7 +46,7 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
         title : 'Employee List',
         frame : true,
         margin : '0 0 10 0',
-        flex : 1
+        height : 300,
     },{
         xtype : 'employee-form',
         title : 'Employee Information',
@@ -56,7 +56,7 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
     },{
         xtype : 'employee-tab',
         frame : true,
-        flex : 1
+        height : 400
     }],
     listeners : {
         'afterrender' : 'onResetMode',

@@ -1,0 +1,30 @@
+
+.miraeweb-filedrop-zone{
+    width:100%;
+    height:100%;
+    background:white;
+    text-align: center;
+    line-height:14px;
+    font-size:12px;
+    font-weight:400;
+    border: 6px dotted black;
+}
+
+.miraeweb-filedrop-zone .miraeweb-filedrop-text{
+    padding-top: 14px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 150px;
+}
+
+
+
+.miraeweb-filedrop-image {
+    width: 256px;
+    height: 192px;
+    position: absolute;
+    text-align: center;
+    background-size: 192px 256px;
+    background-repeat: no-repeat;
+    background-image: url('../resources/ico/file-drop.jpg');
+}

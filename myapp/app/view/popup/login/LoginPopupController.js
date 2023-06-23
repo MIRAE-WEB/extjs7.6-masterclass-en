@@ -38,7 +38,6 @@ Ext.define('MyApp.view.popup.login.LoginPopupController', {
                 var resObj = Ext.decode(response.responseText);
 
                 var accessToken =resObj.accessToken;
-                accessToken = Miraeweb.Jwt.backendGenerateAccessToken();
                 Miraeweb.Jwt.setAccessToken(resObj.accessToken);
                 window.location.reload();
             }
