@@ -29,20 +29,21 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGridController', {
             return false;
         }
 
-        Ext.Msg.confirm('Info','Delete?',function(btn){
-           if(btn=='yes'){
-
-               Ext.Ajax.request({
-                   url : apiHost+'/users/'+userIdx,
-                   method : 'DELETE',
-                   success: function(){
-                       me.onBtnSearch();
-                   }
-               })
-           }
+        Miraeweb.Ajax.request({
+            url : apiHost+'/users/'+userIdx,
+            method : 'DELETE',
+            confirmMsg : {
+                title : 'Info',
+                message : 'Delete?'
+            },
+            successMsg : {
+                title : 'Info',
+                message : 'Success Delete'
+            },
+            success: function(){
+                me.onBtnSearch();
+            }
         });
-
-
     },
 
     onSelect: function (rowmodel, record, index) {

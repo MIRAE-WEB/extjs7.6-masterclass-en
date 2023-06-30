@@ -2,6 +2,10 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.employee-form',
 
+    requires: [
+        'Miraeweb.utils.Ajax'
+    ],
+
     onResetMode : function(){
         this.getView().getForm().reset();
     },
@@ -48,23 +52,22 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
         }
         var jsonData = Ext.encode(data);
 
-        Ext.Msg.confirm('Info', 'Save Data?',function(btn){
-            if(btn=='yes') {
 
-                Ext.Ajax.request({
-                    url : apiHost + '/users/'+data.userIdx,
-                    method : 'PUT',
-                    jsonData : jsonData,
-                    success : function(){
-                        Ext.Msg.alert('Info', 'Save Success', function (btn) {
-                            if (btn == 'ok') {
-
-                                globalContent.fireEvent('search-employee');
-                            }
-                        });
-                    }
-                })
+        Miraeweb.Ajax.request({
+            url : apiHost+'/usdfsers/'+data.userIdx,
+            method : 'PUT',
+            jsonData : jsonData,
+            confirmMsg : {
+                title : 'Info',
+                message : 'Save Data?'
+            },
+            successMsg : {
+                title : 'Info',
+                message : 'Save Success'
+            },
+            success :function(){
+                globalContent.fireEvent('search-employee');
             }
-            });
+        });
     }
 });

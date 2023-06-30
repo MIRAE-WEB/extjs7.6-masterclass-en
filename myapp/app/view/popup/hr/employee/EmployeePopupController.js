@@ -2,6 +2,10 @@ Ext.define('MyApp.view.popup.hr.employee.EmployeePopupController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.employee-popup',
 
+    requires: [
+        'Miraeweb.utils.Ajax'
+    ],
+
     onAfterRender : function(){
         this.getView().down('toolbar[dock=top]').hide();
     },
@@ -48,26 +52,23 @@ Ext.define('MyApp.view.popup.hr.employee.EmployeePopupController', {
             "zipCode": data.zipCode
         }
 
-        Ext.Msg.confirm('Info', 'Save Data?',function(btn){
-            if(btn=='yes'){
+        Miraeweb.Ajax.request({
+            url : apiHost+'/users',
+            method : 'POST',
+            jsonData : Ext.encode(data),
+            confirmMsg : {
+                title : 'Info',
+                message : 'Save Data?'
+            },
+            successMsg : {
+                title : 'Info',
+                message : 'Save Success'
+            },
+            success :function(){
+                thisView.hide();
+                Ext.callback(thisView.callbackFunc,thisView.callbackScope);
 
-                Ext.Ajax.request({
-                    url : apiHost+'/users',
-                    method : 'POST',
-                    jsonData : Ext.encode(data),
-                    success : function(){
-
-                        Ext.Msg.alert('Info','Save Success',function(btn){
-                            if(btn=='ok'){
-                                thisView.hide();
-                                Ext.callback(thisView.callbackFunc,thisView.callbackScope);
-                            }
-                        })
-
-                    }
-                });
             }
-
         });
 
 
