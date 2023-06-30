@@ -29,25 +29,14 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
         }
 
         Ext.Msg.confirm('Info', 'Save Data?',function(btn){
-            if(btn=='yes'){
+            if(btn=='yes') {
+                Ext.Msg.alert('Info', 'Save Success', function (btn) {
+                    if (btn == 'ok') {
 
-                Ext.Ajax.request({
-                    url : 'resources/data/users.json',
-                    method : 'POST',
-                    params : data,
-                    success : function(){
-
-                        Ext.Msg.alert('Info','Save Success',function(btn){
-                            if(btn=='ok'){
-
-                                globalContent.fireEvent('search-employee');
-                            }
-                        });
-
+                        globalContent.fireEvent('search-employee');
                     }
                 });
             }
-
-        });
+            });
     }
 });

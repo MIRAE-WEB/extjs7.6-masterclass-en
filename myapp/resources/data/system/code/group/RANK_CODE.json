@@ -2,22 +2,27 @@
   "RANK_CODE" : [
     {
       "code": "R100",
+      "preCode" : "RANK_CODE",
       "codeName": "Staff"
     },
     {
       "code": "R200",
+      "preCode" : "RANK_CODE",
       "codeName": "Manager"
     },
     {
       "code": "R300",
+      "preCode" : "RANK_CODE",
       "codeName": "Director"
     },
     {
       "code": "R400",
+      "preCode" : "RANK_CODE",
       "codeName": "VP"
     },
     {
       "code": "R500",
+      "preCode" : "RANK_CODE",
       "codeName": "Executive"
     }
   ]

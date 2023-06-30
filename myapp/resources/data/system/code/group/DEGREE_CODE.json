@@ -2,18 +2,22 @@
   "DEGREE_CODE" :[
     {
       "code": "D100",
+      "preCode" : "DEGREE_CODE",
       "codeName": "Associate"
     },
     {
       "code": "D200",
+      "preCode" : "DEGREE_CODE",
       "codeName": "Bachelor"
     },
     {
       "code": "D300",
+      "preCode" : "DEGREE_CODE",
       "codeName": "Master"
     },
     {
       "code": "D400",
+      "preCode" : "DEGREE_CODE",
       "codeName": "Doctor"
     }
   ]
