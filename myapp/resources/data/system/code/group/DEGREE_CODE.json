@@ -1,0 +1,20 @@
+{
+  "DEGREE_CODE" :[
+    {
+      "code": "D100",
+      "codeName": "Associate"
+    },
+    {
+      "code": "D200",
+      "codeName": "Bachelor"
+    },
+    {
+      "code": "D300",
+      "codeName": "Master"
+    },
+    {
+      "code": "D400",
+      "codeName": "Doctor"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "EMPLOYEE_STATE_CODE" : [
+    {
+      "code": "E100",
+      "codeName": "Enrolled"
+    },
+    {
+      "code": "E200",
+      "codeName": "Leave"
+    },
+    {
+      "code": "E400",
+      "codeName": "Resigned"
+    }
+  ]
+}

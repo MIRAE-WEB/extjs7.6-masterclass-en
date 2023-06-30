@@ -1,0 +1,31 @@
+{
+  "educations": [
+    {
+      "userEducationIdx": 6,
+      "user_idx": 4,
+      "institution": "D University",
+      "major": "Materials engineering",
+      "degreeCode": "D200",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    },
+    {
+      "userEducationIdx": 7,
+      "user_idx": 4,
+      "institution": "D University",
+      "major": "Materials engineering",
+      "degreeCode": "D300",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    },
+    {
+      "userEducationIdx": 8,
+      "user_idx": 4,
+      "institution": "D University",
+      "major": "Materials",
+      "degreeCode": "D400",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    }
+  ]
+}

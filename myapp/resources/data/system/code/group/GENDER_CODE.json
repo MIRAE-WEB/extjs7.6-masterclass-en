@@ -1,0 +1,12 @@
+{
+  "GENDER_CODE" : [
+    {
+      "code": "MALE",
+      "codeName": "Male"
+    },
+    {
+      "code": "FEMALE",
+      "codeName": "Female"
+    }
+  ]
+}

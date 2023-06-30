@@ -1,0 +1,16 @@
+{
+  "DEPT_CODE" :[
+    {
+      "code": "A1000",
+      "codeName": "Service R&D"
+    },
+    {
+      "code": "A1001",
+      "codeName": "Platform R&D"
+    },
+    {
+      "code": "A1002",
+      "codeName": "UI Design"
+    }
+  ]
+}

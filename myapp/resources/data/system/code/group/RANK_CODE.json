@@ -1,0 +1,24 @@
+{
+  "RANK_CODE" : [
+    {
+      "code": "R100",
+      "codeName": "Staff"
+    },
+    {
+      "code": "R200",
+      "codeName": "Manager"
+    },
+    {
+      "code": "R300",
+      "codeName": "Director"
+    },
+    {
+      "code": "R400",
+      "codeName": "VP"
+    },
+    {
+      "code": "R500",
+      "codeName": "Executive"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "BANK_CODE" : [
+    {
+      "code": "A10",
+      "codeName": "JP Morgan"
+    },
+    {
+      "code": "A11",
+      "codeName": "Standard Charted"
+    },
+    {
+      "code": "A13",
+      "codeName": "Citi Bank"
+    },
+    {
+      "code": "A14",
+      "codeName": "HSBC"
+    }
+  ]
+}

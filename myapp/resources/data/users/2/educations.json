@@ -1,0 +1,15 @@
+{
+  "educations": [
+    {
+      "userEducationIdx": 3,
+      "user_idx": 2,
+
+
+      "institution": "B University",
+      "major": "Social Welfare",
+      "degreeCode": "D200",
+      "graduationCode": "G300",
+      "yearOfGraduation": ""
+    }
+  ]
+}
