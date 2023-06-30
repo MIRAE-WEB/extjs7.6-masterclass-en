@@ -7,16 +7,9 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
     },
     onUpdateMode : function(){
         var userIdx = this.getView().lookupViewModel().get('userIdx');
-
-        this.getView().down('file-container').url = 'resources/data/users/'+userIdx+'/files.json';
         var employeeStore = this.getView().lookupViewModel().get('employeeStore');
         var record = employeeStore.findRecord('userIdx',userIdx);
-        record.data.attachFileIds=userIdx;
         this.getView().getForm().loadRecord(record);
-
-
-
-
     },
     onBtnSave : function(button){
         var thisView = this.getView();
@@ -36,25 +29,14 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
         }
 
         Ext.Msg.confirm('Info', 'Save Data?',function(btn){
-            if(btn=='yes'){
+            if(btn=='yes') {
+                Ext.Msg.alert('Info', 'Save Success', function (btn) {
+                    if (btn == 'ok') {
 
-                Miraeweb.Ajax.request({
-                    url : 'resources/data/users.json',
-                    method : 'POST',
-                    params : data,
-                    success : function(){
-
-                        Ext.Msg.alert('Info','Save Success',function(btn){
-                            if(btn=='ok'){
-
-                                globalContent.fireEvent('search-employee');
-                            }
-                        });
-
+                        globalContent.fireEvent('search-employee');
                     }
                 });
             }
-
-        });
+            });
     }
 });

@@ -2,14 +2,17 @@
   "GRADUATION_CODE" : [
     {
       "code": "G100",
+      "preCode" : "GRADUATION_CODE",
       "codeName": "Enrolled"
     },
     {
       "code": "G200",
+      "preCode" : "GRADUATION_CODE",
       "codeName": "Leave"
     },
     {
       "code": "G300",
+      "preCode" : "GRADUATION_CODE",
       "codeName": "Graduated"
     }
   ]
