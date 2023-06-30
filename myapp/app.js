@@ -13,8 +13,11 @@ Ext.application({
             quickTips: true
         }
     },
+    controller : [
+        'Miraeweb.controller.MenuController'
+    ],
     stores : [
-        'Navigation'
+        'MiraewebTheme.store.Navigation'
     ],
 
     requires: [
