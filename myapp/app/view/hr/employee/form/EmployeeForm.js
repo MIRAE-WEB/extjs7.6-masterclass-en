@@ -8,6 +8,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         'Ext.form.FieldContainer',
         'Ext.form.field.ComboBox',
         'Ext.form.field.Date',
+        'Ext.form.field.Hidden',
         'Ext.form.field.Radio',
         'Ext.form.field.Text',
         'Ext.layout.container.HBox',
@@ -33,6 +34,9 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeForm',{
         handler : 'onBtnSave'
     }],
     items : [{
+        xtype : 'hidden',
+        name : 'userIdx'
+    },{
         xtype : 'textfield',
         allowBlank : false,
         name : 'userId',

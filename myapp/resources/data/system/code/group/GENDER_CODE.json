@@ -2,10 +2,12 @@
   "GENDER_CODE" : [
     {
       "code": "MALE",
+      "preCode" : "GENDER_CODE",
       "codeName": "Male"
     },
     {
       "code": "FEMALE",
+      "preCode" : "GENDER_CODE",
       "codeName": "Female"
     }
   ]

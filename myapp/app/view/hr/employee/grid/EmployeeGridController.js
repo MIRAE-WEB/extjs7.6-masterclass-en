@@ -1,7 +1,6 @@
 Ext.define('MyApp.view.hr.employee.grid.EmployeeGridController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.employee-grid',
-
     onBtnSearch : function(button){
 
         var globalContent = this.getView().up('global-content');
@@ -34,7 +33,7 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGridController', {
            if(btn=='yes'){
 
                Ext.Ajax.request({
-                   url : 'test/'+userIdx,
+                   url : apiHost+'/users/'+userIdx,
                    method : 'DELETE',
                    success: function(){
                        me.onBtnSearch();

@@ -21,7 +21,7 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagement',{
               autoLoad : true,
               proxy : {
                   type : 'ajax',
-                  url : 'resources/data/users.json',
+                  url : apiHost+'/users',
                   method : 'GET',
                   reader :{
                       type : 'json',

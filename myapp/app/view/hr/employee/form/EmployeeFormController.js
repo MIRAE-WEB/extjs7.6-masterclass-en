@@ -15,7 +15,7 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
         var thisView = this.getView();
         var globalContent = this.getView().up('global-content');
 
-        var forms = this.getView().query('form');
+        var forms = globalContent.query('form');
 
         var data = {};
         for(var form of forms){
@@ -28,26 +28,43 @@ Ext.define('MyApp.view.hr.employee.form.EmployeeFormController', {
             data =Ext.apply(data,form.getForm().getValues());
         }
 
+        data={
+            "address1": data.address1,
+            "address2": data.address2,
+            "bankAccount": data.bankAccount,
+            "bankCode": data.bankCode,
+            "birthDate": data.birthDate,
+            "deptCode":data.deptCode,
+            "email": data.email,
+            "employeeNumber": data.employeeNumber,
+            "genderCode": data.genderCode,
+            "mobile": data.mobile,
+            "ownerName": data.ownerName,
+            "rankCode": data.rankCode,
+            "userId": data.userId,
+            "userIdx": data.userIdx,
+            "userName": data.userName,
+            "zipCode": data.zipCode
+        }
+        var jsonData = Ext.encode(data);
+
         Ext.Msg.confirm('Info', 'Save Data?',function(btn){
-            if(btn=='yes'){
+            if(btn=='yes') {
 
                 Ext.Ajax.request({
-                    url : 'resources/data/users.json',
-                    method : 'POST',
-                    params : data,
+                    url : apiHost + '/users/'+data.userIdx,
+                    method : 'PUT',
+                    jsonData : jsonData,
                     success : function(){
-
-                        Ext.Msg.alert('Info','Save Success',function(btn){
-                            if(btn=='ok'){
+                        Ext.Msg.alert('Info', 'Save Success', function (btn) {
+                            if (btn == 'ok') {
 
                                 globalContent.fireEvent('search-employee');
                             }
                         });
-
                     }
-                });
+                })
             }
-
-        });
+            });
     }
 });

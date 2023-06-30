@@ -29,14 +29,32 @@ Ext.define('MyApp.view.popup.hr.employee.EmployeePopupController', {
 
             data =Ext.apply(data,form.getForm().getValues());
         }
+        data={
+            "address1": data.address1,
+            "address2": data.address2,
+            "bankAccount": data.bankAccount,
+            "bankCode": data.bankCode,
+            "birthDate": data.birthDate,
+            "deptCode":data.deptCode,
+            "email": data.email,
+            "employeeNumber": data.employeeNumber,
+            "genderCode": data.genderCode,
+            "mobile": data.mobile,
+            "ownerName": data.ownerName,
+            "rankCode": data.rankCode,
+            "userId": data.userId,
+            "userIdx": data.userIdx,
+            "userName": data.userName,
+            "zipCode": data.zipCode
+        }
 
         Ext.Msg.confirm('Info', 'Save Data?',function(btn){
             if(btn=='yes'){
 
                 Ext.Ajax.request({
-                    url : 'resources/data/users.json',
+                    url : apiHost+'/users',
                     method : 'POST',
-                    params : data,
+                    jsonData : Ext.encode(data),
                     success : function(){
 
                         Ext.Msg.alert('Info','Save Success',function(btn){

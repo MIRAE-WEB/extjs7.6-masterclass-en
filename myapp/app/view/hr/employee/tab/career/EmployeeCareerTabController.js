@@ -11,11 +11,11 @@ Ext.define('MyApp.view.hr.employee.tab.career.EmployeeCareerTabController', {
         var store = this.getView().down('grid').getStore();
 
         Ext.Ajax.request({
-            url : 'resources/data/users/'+userIdx+'/careers.json',
+            url : apiHost+'/users/'+userIdx+'/careers',
             method : 'GET',
             success : function(response){
                 var resObj = Ext.decode(response.responseText);
-                store.loadRawData(resObj.careers);
+                store.loadRawData(resObj.userCareers);
             }
         })
     }

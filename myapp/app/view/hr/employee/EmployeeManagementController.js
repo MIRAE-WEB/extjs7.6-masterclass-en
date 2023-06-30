@@ -5,13 +5,18 @@ Ext.define('MyApp.view.hr.employee.EmployeeManagementController', {
         var globalContent = this.getView();
         this.getView().lookupViewModel().set('userIdx',null);
         this.onResetMode();
-        globalContent.down('employee-grid').getStore().load();
+        var searchTxt = this.getView().down('[name=searchTxt]').getValue();
+        globalContent.down('employee-grid').getStore().load({
+            params : {
+                searchTxt : searchTxt
+            }
+        });
     },
     onResetMode : function(){
 
         var globalContent = this.getView();
 
-        var fields = globalContent.query('field');
+        var fields = globalContent.query('form field');
 
         for(var field of fields){
             field.setReadOnly(true);

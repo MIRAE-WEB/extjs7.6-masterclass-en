@@ -14,6 +14,7 @@ Ext.define('MyApp.view.hr.employee.grid.EmployeeGrid',{
 
     tbar : [{
         xtype : 'textfield',
+        name : 'searchTxt',
         fieldLabel : 'Filter'
     },{
         xtype : 'button',

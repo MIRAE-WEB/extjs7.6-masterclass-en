@@ -4,20 +4,20 @@
  */
 Ext.application({
     extend: 'Ext.app.Application',
-
     name: 'MyApp',
-
     quickTips: false,
     platformConfig: {
         desktop: {
             quickTips: true
         }
     },
-    controller : [
-        'Miraeweb.controller.MenuController'
+    defaultToken : 'employee-management',
+    controllers : [
+      'MiraewebTheme.controller.MenuController'
     ],
     stores : [
-        'MiraewebTheme.store.Navigation'
+        'MiraewebTheme.store.Navigation',
+
     ],
 
     requires: [

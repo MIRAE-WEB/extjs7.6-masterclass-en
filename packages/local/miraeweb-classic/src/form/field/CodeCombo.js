@@ -24,11 +24,11 @@ Ext.define('Miraeweb.form.field.CodeCombo',{
             autoLoad : true,
             proxy : {
                 type : 'ajax',
-                url : 'resources/data/system/code/group/'+codeGroup+'.json',
+                url :  apiHost+'/sys/codes/'+codeGroup,
                 method : 'GET',
                 reader : {
                     type : 'json',
-                    rootProperty : codeGroup
+                    rootProperty : 'sysCodes.'+codeGroup
                 }
             }
         });
